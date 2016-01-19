@@ -87,12 +87,12 @@ inputfile.close()
 #sys.exit("stopped")
 #########################################################################################
 
-inputfile = open('./Gene_With_Both_L&V.txt', mode='r')
+#inputfile = open('./Gene_With_Both_L&V.txt', mode='r')
 vinputfile = open('./Gene_With_Viable_Only.txt', mode='r')
 linputfile = open('./Gene_With_Lethal_Only.txt', mode='r')
 
-lethal = []
-viable = []
+#lethal = []
+#viable = []
 
 #sys.exit("Stopped")
 # out = open('./Stuff.txt', mode='w')

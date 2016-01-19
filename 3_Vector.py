@@ -107,10 +107,9 @@ def Duplicates(Up):
 
 
 debug = 0
-# outputfile = open('/home/mint/git/prediction-of-Lethality-in-Fly-Mutants-using-Machine-Learning/Workspace/Lethality Extraction/Vector.txt')
+
 data = open('./Gene&GO_F_With_Lethality.txt')
-# data = open('./Gene&GO_F_No_ISS.txt')#NO ISS
-# data = open('./Gene&GO_F_No_IMP.txt')#NO IMP
+
 
 outputfile = open('./BinVec.txt', mode='w')
 OutMissing = open('./Missing.txt', mode='w')
@@ -136,14 +135,13 @@ for line in data:
 
             temp = csv[csvCount]
             temp = temp.replace(":", "")
-            # print ("Ancestors")
-            # print(gr.incidents(temp))
+
 
             Up.append(temp)
 
 
 
-            # Ancestors.extend(Up)
+
             print("Up")
             Continue = True
             Nodes = []
@@ -159,7 +157,7 @@ for line in data:
                                 Up.extend(gr.incidents(node))
                                 l = l + 1
 
-                           if l == 1000000:
+                                if l == 1000000:
                                     Up = Duplicates(Up)
                                     # print("Parents Added")
                             except (KeyError, ValueError):
@@ -205,6 +203,8 @@ for line in data:
             except (KeyError, ValueError):
                 Missing.append(Node)
 
+    outputfile.write(Gene)
+    outputfile.write(',')
 
     for key in BinVec:
         outputfile.write(str(key))
@@ -221,6 +221,7 @@ for line in data:
         del Ancestors[:]
         del ModifiedAncestors[:]
         del Nodes[:]
+        del NodesSeen[:]
     except NameError:
         print "NameError"
 
