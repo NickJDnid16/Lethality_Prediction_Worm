@@ -136,7 +136,7 @@ linputfile = open('./Gene_With_Lethal_Only.txt', mode='r')
 
 voutputfile = open('./Gene_With_Viable_Only_Temp.txt', mode='w')
 loutputfile = open('./Gene_With_Lethal_Only_Temp.txt', mode='w')
-
+essOutputfile = open('./Lethal_Worm.txt', mode='w')
 
 for line in vinputfile:
     line_split = line.split(",")
@@ -146,6 +146,7 @@ for line in linputfile:
     line_split = line.split(",")
     gene = line_split[0]
     loutputfile.write(gene+","+"lethal"+"\n")
+    essOutputfile.write(gene + "\n")
 
 #sys.exit("Stopped")
 vinputfile.close()
