@@ -102,3 +102,13 @@ for rows in inputfile:
             if "GO" in str(rows):
                 writer.writerow(rows)
                 print rows
+########################################################
+outputfile.close()
+inputfile = open('./Gene&GO_F_With_Lethality.txt', mode='r')
+lethaloutfile = open('./Worm_Gene_Lethal.txt', mode='w')
+alloutfile = open('./Worm_Gene_Viable_Lethal.txt', mode='w')
+inputfile = csv.reader(inputfile, delimiter=',')
+for line in inputfile:
+    if "lethal" in line[-1]:
+        lethaloutfile.write(line[0] + "\n")
+    alloutfile.write(line[0] + "\n")
