@@ -38,9 +38,8 @@ data = {}
 for line in inputfile:
 
     if "WB" not in line:
-        Null = "Null"
+        pass
     elif "WB" in line:
-
         split_string = line.split("\t")
         gene = split_string[2]
         Notannotation = split_string[3]
