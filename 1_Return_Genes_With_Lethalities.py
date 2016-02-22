@@ -44,8 +44,9 @@ for line in inputfile:
         gene = split_string[2]
         Notannotation = split_string[3]
         phenotype = split_string[4]
-        if "NOT" in Notannotation:
-            print "Removed 'NOT' Phenotype"
+        if "NOT" in Notannotation:######### Confusing
+            if "WBPhenotype:0000062" in phenotype:
+
         else:
             data[gene] = data.get(gene,"")+Notannotation+","+phenotype+","
 
