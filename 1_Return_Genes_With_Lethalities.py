@@ -5,8 +5,8 @@ Created on 23 Oct 2015
 '''
 import sys
 import codecs
-inputfile = open('./phenotype_association.WS250.wb', mode='r')
-outputfile = open('./Genes.txt', mode='w')
+inputfile = open('./phenotype_association.WS250.wb', mode='rb')
+outputfile = open('./Genes.txt', mode='wb')
 
 
 Lethality = ("WBPhenotype:0000050", "WBPhenotype:0000060", "WBPhenotype:0000054", "WBPhenotype:0000057", "WBPhenotype:0000117", "WBPhenotype:0000118", "WBPhenotype:0000058", \
@@ -38,16 +38,16 @@ data = {}
 for line in inputfile:
 
     if "WB" not in line:
-        pass
+        Null = "Null"
     elif "WB" in line:
+
         split_string = line.split("\t")
         gene = split_string[2]
-        Notannotation = split_string[3]
+        negation = split_string[3]
         phenotype = split_string[4]
-        if "NOT" in Notannotation:
-            print "Removed 'NOT' Phenotype"
-        else:
-            data[gene] = data.get(gene,"")+Notannotation+","+phenotype+","
+        if "NOT" in negation and "WBPhenotype:0000062" in phenotype:
+            phenotype = "" ##Remove entry entirely
+        data[gene] = data.get(gene,"")+negation+","+phenotype+","
 
 for x in data:
     outputfile.write(x+","+data[x]+"\n")
@@ -57,10 +57,10 @@ outputfile.close()
 inputfile.close()
 
 
-inputfile = open('./Genes.txt', mode='r')
-vOutputfile = open('./Gene_With_Viable_Only.txt', mode='w')
-lOutputfile = open('./Gene_With_Lethal_Only.txt', mode='w')
-oOutputfile = open('./Gene_With_Both_L&V.txt', mode='w')
+inputfile = open('./Genes.txt', mode='rb')
+vOutputfile = open('./Gene_With_Viable_Only.txt', mode='wb')
+lOutputfile = open('./Gene_With_Lethal_Only.txt', mode='wb')
+oOutputfile = open('./Gene_With_Both_L&V.txt', mode='wb')
 
 NOT = "NOT"
 WB = "WB"
@@ -84,15 +84,15 @@ inputfile.close()
 #########################################################################################
 
 #inputfile = open('./Gene_With_Both_L&V.txt', mode='r')
-vinputfile = open('./Gene_With_Viable_Only.txt', mode='r')
-linputfile = open('./Gene_With_Lethal_Only.txt', mode='r')
+vinputfile = open('./Gene_With_Viable_Only.txt', mode='rb')
+linputfile = open('./Gene_With_Lethal_Only.txt', mode='rb')
 
 
 
 
-voutputfile = open('./Gene_With_Viable_Only_Temp.txt', mode='w')
-loutputfile = open('./Gene_With_Lethal_Only_Temp.txt', mode='w')
-essOutputfile = open('./Lethal_Worm.txt', mode='w')
+voutputfile = open('./Gene_With_Viable_Only_Temp.txt', mode='wb')
+loutputfile = open('./Gene_With_Lethal_Only_Temp.txt', mode='wb')
+essOutputfile = open('./Lethal_Worm.txt', mode='wb')
 
 for line in vinputfile:
     line_split = line.split(",")
@@ -111,9 +111,9 @@ voutputfile.close()
 loutputfile.close()
 
 
-vinputfile = open('./Gene_With_Viable_Only_Temp.txt', mode='r')
-linputfile = open('./Gene_With_Lethal_Only_Temp.txt', mode='r')
-goutputfile = open('./Single_Lethality_Genes.txt', mode='w')
+vinputfile = open('./Gene_With_Viable_Only_Temp.txt', mode='rb')
+linputfile = open('./Gene_With_Lethal_Only_Temp.txt', mode='rb')
+goutputfile = open('./Single_Lethality_Genes.txt', mode='wb')
 
 for line in vinputfile:
     goutputfile.write(line)
