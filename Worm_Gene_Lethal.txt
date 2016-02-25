@@ -385,7 +385,6 @@ C08B11.8
 taf-1
 cup-5
 cup-2
-E01B7.2
 Y43F8B.19
 C36B1.6
 srd-42
@@ -621,6 +620,7 @@ ifc-2
 nspb-2
 nspb-3
 nspb-1
+gfat-2
 nspb-4
 pah-1
 gfm-1
@@ -783,7 +783,7 @@ T23B3.1
 F37B12.3
 C13F10.2
 ddo-2
-smn-1
+sec-8
 let-615
 let-611
 let-618
@@ -958,6 +958,7 @@ set-4
 dyci-1
 C27A12.9
 sdc-2
+mif-2
 mif-1
 lam-1
 lam-2
@@ -1108,7 +1109,6 @@ cyn-13
 cyn-15
 ZK1225.7
 F12A10.6
-F26F2.7
 eri-1
 tufm-2
 tufm-1
@@ -1137,7 +1137,7 @@ rps-0
 F52G2.3
 blos-4
 ostd-1
-wts-1
+stu-15
 T08B1.1
 osr-1
 C25D7.1
@@ -1278,7 +1278,7 @@ let-756
 let-754
 gfat-1
 lpd-7
-gfat-2
+lpd-5
 ddx-23
 ddx-27
 lrg-1
@@ -1360,6 +1360,7 @@ C23H5.5
 end-1
 end-3
 ned-8
+ncr-1
 cpl-1
 Y54E10A.12
 bec-1
@@ -1452,7 +1453,8 @@ Y48B6A.13
 srbc-64
 F33D11.10
 F09C6.10
-sec-8
+T19D12.2
+smn-1
 sec-5
 sec-6
 sec-3
@@ -1672,6 +1674,7 @@ C25A1.16
 tag-267
 F10E9.11
 crt-1
+rpn-11
 Y39A1A.22
 ztf-18
 ztf-11
@@ -1683,6 +1686,7 @@ K10D6.2
 ucr-2.2
 ucr-2.3
 ucr-2.1
+C44H4.6
 egal-1
 oaz-1
 rla-1
@@ -1734,7 +1738,7 @@ unc-31
 prp-4
 unc-37
 rbr-2
-mif-2
+F26F2.7
 mel-32
 F37C12.14
 W02D9.2
@@ -1775,13 +1779,12 @@ snr-5
 noca-1
 D2030.4
 F17H10.1
-ncr-1
+E01B7.2
 dlat-1
 F25B3.5
 ifa-3
 R144.11
 CD4.3
-ola-1
 grl-17
 spd-1
 R07E5.1
@@ -1811,7 +1814,7 @@ cnt-1
 gut-2
 sams-2
 C08H9.3
-his-38
+mtl-1
 pgl-3
 pgl-1
 attf-6
@@ -1841,7 +1844,6 @@ zyg-1
 zyg-8
 zyg-9
 pars-1
-inx-16
 Y52B11A.10
 frh-1
 Y52B11A.11
@@ -1918,6 +1920,7 @@ tba-4
 tba-6
 BE0003N10.1
 sir-2.4
+F02E9.5
 F02E9.3
 ZK550.3
 mcd-1
@@ -2038,7 +2041,7 @@ zif-1
 C16C8.14
 21ur-15611
 T19B10.2
-hcf-1
+bli-1
 21ur-9557
 pyr-1
 his-74
@@ -2052,7 +2055,6 @@ W03C9.5
 clec-178
 C47E8.4
 let-78
-rpn-11
 let-73
 let-72
 let-70
@@ -2346,9 +2348,10 @@ ttb-1
 din-1
 C31C9.2
 snpn-1
+ola-1
 F52D10.4
 F52D10.2
-mtl-1
+his-38
 his-39
 his-32
 his-33
@@ -2724,7 +2727,6 @@ F52B5.3
 C06A5.3
 F17C8.6
 gras-1
-C44H4.6
 srg-69
 lig-4
 spin-2
@@ -2769,6 +2771,7 @@ ceh-32
 B0513.2
 F59A2.5
 T24E12.6
+rbbp-5
 T07D10.8
 sucl-1
 sucl-2
@@ -2816,7 +2819,6 @@ R04F11.5
 C36A4.4
 R04F11.2
 F21G4.1
-eak-6
 cil-1
 old-2
 cdk-8
@@ -3015,7 +3017,6 @@ gna-1
 pqn-70
 K03B4.1
 mix-1
-T19D12.2
 F31F7.1
 sumv-2
 C14A4.13
@@ -3159,8 +3160,7 @@ Y45F10B.13
 uev-2
 gss-1
 F40F8.1
-dpy-20
-dpy-28
+tbg-1
 R10E8.6
 pdi-2
 epi-1
@@ -3229,10 +3229,11 @@ T19B10.8
 ZK353.3
 dpy-22
 dpy-23
+dpy-20
 dpy-21
 dpy-26
 dpy-27
-tbg-1
+dpy-28
 gln-6
 T21B10.3
 sas-5
@@ -3387,7 +3388,6 @@ che-10
 T25B9.5
 thoc-2
 thoc-1
-rbbp-5
 T26C5.5
 T26C5.4
 Y57E12AL.6
@@ -3484,7 +3484,6 @@ him-6
 him-7
 him-8
 mlt-7
-F02E9.5
 dcaf-1
 mlt-8
 qua-1
@@ -3558,7 +3557,7 @@ cdc-37
 F13D12.6
 figl-1
 stu-14
-stu-15
+wts-1
 stu-12
 stu-13
 stu-11
@@ -3675,7 +3674,7 @@ lpd-6
 jhdm-1
 inx-19
 inx-14
-lpd-5
+inx-16
 inx-11
 inx-13
 inx-12
@@ -3720,8 +3719,9 @@ egl-38
 F44B9.8
 bli-5
 bli-4
-bli-1
+hcf-1
 bli-3
+eak-6
 dsh-1
 Y82E9BR.16
 Y82E9BR.10

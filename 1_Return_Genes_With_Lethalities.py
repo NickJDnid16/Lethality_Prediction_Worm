@@ -45,8 +45,8 @@ for line in inputfile:
         gene = split_string[2]
         negation = split_string[3]
         phenotype = split_string[4]
-        if "NOT" in negation and "WBPhenotype:0000062" in phenotype:
-            phenotype = "" ##Remove entry entirely
+        if "NOT" in negation and any(l in line for l in Lethality):
+            phenotype = ""
         data[gene] = data.get(gene,"")+negation+","+phenotype+","
 
 for x in data:
@@ -61,9 +61,6 @@ inputfile = open('./Genes.txt', mode='rb')
 vOutputfile = open('./Gene_With_Viable_Only.txt', mode='wb')
 lOutputfile = open('./Gene_With_Lethal_Only.txt', mode='wb')
 oOutputfile = open('./Gene_With_Both_L&V.txt', mode='wb')
-
-NOT = "NOT"
-WB = "WB"
 
 for line in inputfile:
     split_string = line.split(",")
@@ -83,7 +80,7 @@ inputfile.close()
 #sys.exit("stopped")
 #########################################################################################
 
-#inputfile = open('./Gene_With_Both_L&V.txt', mode='r')
+
 vinputfile = open('./Gene_With_Viable_Only.txt', mode='rb')
 linputfile = open('./Gene_With_Lethal_Only.txt', mode='rb')
 

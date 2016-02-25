@@ -18,23 +18,23 @@ gr = digraph()
 count = 0
 
 # Input
-GraphInput = codecs.open('./Refined_GO_Nodes.txt', encoding='utf-8', mode='r')
+GraphInput = codecs.open('./Refined_GO_Nodes.txt', encoding='utf-8', mode='rb')
 
-EdgesInput = codecs.open('./GO_Children&Parents.txt', encoding='utf-8', mode='r')
+EdgesInput = codecs.open('./GO_Children&Parents.txt', encoding='utf-8', mode='rb')
 
 with open('./GO_Children&Parents.txt') as json_file:
     json_data = json.load(json_file)
     # print(json_data, "\n")
 
     for key in json_data.keys():
-        ##print ("key:", key, " parents:",json_data[key]['p'], " children:",json_data[key]['c'])#("key:",key,"\n")
+
         node = key.replace(":", "")
         gr.add_node(node)
         print ("Added ", node)
 
     for key in json_data.keys():
         print (count)
-        ##print ("key:", key, " parents:",json_data[key]['p'], " children:",json_data[key]['c'])#("key:",key,"\n")
+
         node = key.replace(":", "")
         # gr.add_node(node)
         for parent in json_data[key]['p']:
@@ -51,7 +51,7 @@ with open('./GO_Children&Parents.txt') as json_file:
                 if not gr.has_edge((node, cd)):
                     gr.add_edge((node, cd))
         count += 1
-# print(GraphInput)
+
 
 counter = 0
 
@@ -108,12 +108,12 @@ def Duplicates(Up):
 
 debug = 0
 
-data = open('./Gene&GO_F_With_Lethality.txt')
+data = open('./Gene&GO_F_With_Lethality.txt', mode ='rb')
 
 
-outputfile = open('./BinVec.txt', mode='w')
-OutMissing = open('./Missing.txt', mode='w')
-OutParents = open('./Parents.txt', mode='w')
+outputfile = open('./BinVec.txt', mode='wb')
+OutMissing = open('./Missing.txt', mode='wb')
+OutParents = open('./Parents.txt', mode='wb')
 Genes = open('./Genes.txt', mode='w')
 for line in data:
     debug = debug + 1
