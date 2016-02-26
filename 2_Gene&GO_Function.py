@@ -7,7 +7,7 @@ data = {}
 import sys
 
 outputfile = open('./Gene&GO_F.txt', mode='wb')
-FUNCoutputfile = open('./Gene_With_GO_FUNC .txt', mode='wb')
+FUNCoutputfile = open('./Gene_With_GO_FUNC.txt', mode='wb')
 GOoutputfile = open('./Gene_With_Only_GO.txt', mode='wb')
 Seen =[]
 FUNC = []
@@ -22,6 +22,10 @@ for line in geneAssociation:
         GO = split_string [4]
         dataMarker = split_string [6]
         data[genome] = data.get(genome,"")+GO+","+dataMarker+","
+        if genome not in Seen:
+            Seen.append(genome)
+            GOoutputfile.write(genome + "\n")
+        FUNC.append(genome + "\t" + GO  + "\n")
 
 for line in open('./Single_Lethality_Genes.txt', mode='rb'):
     line = line.rstrip()
