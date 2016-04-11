@@ -6,7 +6,7 @@ Created on 26 Oct 2015
 
 import codecs
 
-output = codecs.open('./Gene_ARFF.txt', encoding='utf-8', mode='wb')
+output = codecs.open('./Gene_ARFF.arff', encoding='utf-8', mode='wb')
 
 line = 0
 
