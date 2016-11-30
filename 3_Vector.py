@@ -190,6 +190,9 @@ for line in data:
     print ModifiedAncestors
 
     del Ancestors[:]
+    ModifiedAncestors.append("GO0003674")
+    ModifiedAncestors.append("GO0008150")
+    ModifiedAncestors.append("GO0005575")
     for Node in ModifiedAncestors:
 
         # OutParents.write(Node)
@@ -318,3 +321,4 @@ for element in newFUNC:
 
 
 print(datetime.now() - startTime)
+
